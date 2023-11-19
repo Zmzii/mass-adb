@@ -9,7 +9,7 @@ fi
 
 while read -r ip
 do
-  RUN="adb connect $ip &"
+  RUN="adb connect $ip:5555 &"
   echo $RUN
   ${RUN}
 done < $1
