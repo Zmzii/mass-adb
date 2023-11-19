@@ -10,7 +10,7 @@ fi
 DEVICES=`adb devices | tail -n +2 | cut -f1`
 for DEVICE in $DEVICES
 do
-  RUN="adb -s $DEVICE shell $2 &"
+  RUN="adb -s $DEVICE shell $@ &"
   echo ">> $RUN"
   ${RUN}
 done
