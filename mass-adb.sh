@@ -11,9 +11,7 @@ adb devices
 
 while read -r ip
 do
-  RUN="adb connect $ip:5555 &"
-  echo $RUN
-  ${RUN}
+  adb connect $ip:5555 &
 done < $1
 
 # ADB All[Send adb command to all connected devices]
