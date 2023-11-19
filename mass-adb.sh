@@ -14,10 +14,13 @@ do
   ${RUN}
 done < $1
 
-echo "Sleeping for 15 seconds before sending command!"
-sleep 15
-
 # ADB All[Send adb command to all connected devices]
+
+if [ -z $2 ]
+then
+  exit 1
+fi
+
 DEVICES=`adb devices | tail -n +2 | cut -f1`
 for DEVICE in $DEVICES
 do
