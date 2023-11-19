@@ -7,6 +7,8 @@ then
   exit 1
 fi
 
+adb devices
+
 while read -r ip
 do
   RUN="adb connect $ip:5555 &"
