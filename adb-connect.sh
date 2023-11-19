@@ -3,7 +3,7 @@
 # Connect to all devices from ip list
 if [ $# -eq 0 ]
 then
-  echo "Usage: ./mass-adb.sh ips.txt \"shell command\""
+  echo "Usage: ./adb-connect.sh ips.txt"
   exit 1
 fi
 
