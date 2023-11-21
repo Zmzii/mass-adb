@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Connect to all devices from ip list
 if [ $# -eq 0 ]
 then
-  echo "Usage: ./adb-all.sh \"Adb shell Command(s)\""
+  echo "Usage: ./adb-all.sh \"Adb Command(s)\""
   exit 1
 fi
 
